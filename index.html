@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mikias Gebre Portfolio</title>
+    <meta name="author" content="XO PIXEL">
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='js/jquery.scrollto.js'></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <div id="navcontainer">
+        <nav>
+            <ul>
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#About">About </a></li>
+                <li><a href="#Resume">Resume</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <nav class="mobile">
+        <button onclick="openNav()" class="clicker_class">  </button>
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">Welcome</a>
+            <a href="#About">About </a>
+            <a href="#Resume">Resume</a>
+            <a href="#Project">Project</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </div>
+</header>
+<section id="About">
+    <div id="main">
+        <div class="main_header">
+            <h1>  My Passion for technology  </h1>
+        </div>
+        <div class="Profile">
+            <img src="images/ProfilePicture.jpg" alt="Mountain View" class = "Profile_Pics " style="vertical-align:middle ; ">
+        </div>
+        <div class="image_section">
+            <p>
+                Hello! I am Mikias, a programmer based in Turku, Finland.<br>
+                Information technology is something I have been passionate about for as long as I can remember. Before I start into development,
+                I constantly stop and think as a user. What excites me the most is the unknown of this ever changing industry. The
+                one constant is my passion that I have for creating beautiful and eye catching websites.
+            </p>
+        </div>
+    </div>
+</section>
+<section id="Resume">
+    <div id ="second">
+        <div class="second_header">
+            <h2> Technologies  </h2>
+        </div>
+        <div class="Resume_wrapper">
+            <div class="Resume">
+                <h5> COMPLETE RESUME </h5>
+                <a href="Curriculum%20Vitae%20English.pdf"><img src="images/PdfIcon.png" alt="Mountain View" class = "PdfIcon1"></a>
+            </div>
+            <div class="Resume_center">
+                <h6> DAY-TO-DAY COMFORT </h6>
+                <ul class="list_ul_left">
+                    <li class="list_item"> HTML5/CSS3</li>
+                    <li class="list_item"> JAVA</li>
+                    <li class="list_item"> JAVASCRIPT</li>
+                    <li class="list_item"> C </li>
+                    <li class="list_item"> BOOTSTRAP</li>
+                    <li class="list_item"> WORDPRESS/PHP</li>
+                    <li class="list_item"> JQuery</li>
+                    <li class="list_item"> MYSQL</li>
+                    <li class="list_item"> SWIFT</li>
+                </ul>
+            </div>
+            <div class="Resume_right">
+                <h6> EXPERIENCE WITH </h6>
+                <ul class="list_ul_right">
+                    <li class="list_item"> C#</li>
+                    <li class="list_item"> REACTJS (limited)</li>
+                    <li class="list_item"> ANGULAR</li>
+                    <li class="list_item"> C++ </li>
+                    <li class="list_item"> DJANGO </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Project">
+    <div id = "third">
+        <div class="third_header">
+            <h3> SOME OF MY WORKS </h3>
+        </div>
+        <div class="Project_wrapper">
+            <div id="portfolio" class="clearfix">
+                <div class="first_block">
+                    <img src="images/Scoutaway.jpg" alt="Scoutaway">
+                    <button class="message" onclick="window.location.href='https://github.com/mikiasgebre/scoutaway'">CODE</button>
+                    <button class="link1" onclick="window.location.href='http://www.partio.fi/uutiset/scoutaway-on-ensimmainen-suomalainen-partiomaailmaan-sijoittuva-mobiilipeli'">WEBSITE</button>
+                </div>
+                <div class="second_block">
+                    <img src="images/VSMapp.png" alt="VSMapp">
+                    <button class="message2" onclick="window.location.href='https://github.com/mikiasgebre/VSM-app/tree/davis'">SOURCE CODE</button></div>
+                <div class="third_block">
+                    <img src="images/FellowGames.jpg" alt="FellowGames">
+                    <button class="message3" onclick="window.location.href='http://fellowgames.com/'">WEBSITE</button></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Contact">
+    <div id="fourth">
+        <div id="form_">
+            <h4>  CONTACT ME </h4>
+            <div id="script">Thank you for your message</div>
+            <form id="form" class="topBefore" action="SendEmail.php" method="get">
+                <input id="name" name="name" type="text" placeholder="NAME" required>
+                <input type='hidden' name='var' value='<?php echo "$var";?>'/>
+                <input  name="email"   id="email" type="text" placeholder="E-MAIL" required>
+                <textarea name="message"     id="message"  placeholder="MESSAGE" required></textarea>
+                <input id="submit" type="submit" value="send!">
+            </form>
+        </div>
+    </div>
+</section>
+<footer>
+    <section>
+        <p>Copyright © 2017 by Mikias Gebre | All right reserved.</p>
+    </section>
+</footer>
+<script>
+
+
+    $(document).ready(function(){
+
+        $('.first_block').hover(
+            function(){
+                $(this).find('.message').fadeIn(1000);
+                $(this).find('.link1').fadeIn(1000);
+            },
+            function(){
+                $(this).find('.message').fadeOut(800);
+                $(this).find('.link1').fadeOut(800);
+            }
+        );
+
+        $('.second_block').hover(
+            function(){
+                $(this).find('.message2').fadeIn(1000);
+
+            },
+            function(){
+                $(this).find('.message2').fadeOut(800);
+
+            }
+        );
+
+        $('.third_block').hover(
+            function(){
+                $(this).find('.message3').fadeIn(1000);
+
+            },
+            function(){
+                $(this).find('.message3').fadeOut(800);
+
+            }
+        );
+
+
+
+        /**
+         * This part does the "fixed navigation after scroll" functionality
+         * We use the jQuery function scroll() to recalculate our variables as the
+         * page is scrolled/
+         */
+        $(window).scroll(function(){
+            var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+            var div_top = $('#navcontainer').offset().top;
+            if (window_top > div_top) {
+                $('nav').addClass('stick');
+            } else {
+                $('nav').removeClass('stick');
+            }
+        });
+
+        /**
+         * This part causes smooth scrolling using scrollto.js
+         * We target all a tags inside the nav, and apply the scrollto.js to it.
+         */
+        $("nav a").click(function(evn){
+            evn.preventDefault();
+            $('html,body').scrollTo(this.hash, this.hash);
+        });
+
+        /**
+         * This part handles the highlighting functionality.
+         * We use the scroll functionality again, some array creation and
+         * manipulation, class adding and class removing, and conditional testing
+         */
+        var aChildren = $("nav li").children(); // find the a children of the list items
+        var aArray = []; // create the empty aArray
+        for (var i=0; i < aChildren.length; i++) {
+            var aChild = aChildren[i];
+            var ahref = $(aChild).attr('href');
+            aArray.push(ahref);
+        } // this for loop fills the aArray with attribute href values
+
+        $(window).scroll(function(){
+            var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+            var windowHeight = $(window).height(); // get the height of the window
+            var docHeight = $(document).height();
+
+            for (var i=0; i < aArray.length; i++) {
+                var theID = aArray[i];
+                if(theID.length ===! 0) {
+                    var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                    var divHeight = $(theID).height(); // get the height of the div in question
+                }
+                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+                    $("a[href='" + theID + "']").addClass("nav-active");
+                } else {
+                    $("a[href='" + theID + "']").removeClass("nav-active");
+                }
+            }
+
+            if(windowPos + windowHeight == docHeight) {
+                if (!$("nav li:last-child a").hasClass("nav-active")) {
+                    var navActiveCurrent = $(".nav-active").attr("href");
+                    $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+                    $("nav li:last-child a").addClass("nav-active");
+                }
+            }
+        });
+    });
+
+    $(document).ready(function(){
+        var scroll_pos = 0;
+        var x = $('contact').position();
+        $(document).scroll(function() {
+            scroll_pos = $(this).scrollTop();
+            if( $( window ).width() > 640)
+            {
+                if(scroll_pos > 468) {
+                    $("#navcontainer a").css('color', 'black');
+                } else
+                {
+                    $("#navcontainer a").css('color', 'white');
+                }
+            }
+        });
+
+    });
+
+
+    function openNav() {
+
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+
+        document.getElementById("myNav").style.height = "0%";
+    }
+
+
+    (function ($) {
+        $(document).ready(function () {
+            var isShowing = false;
+
+            var toggleMenu = function() {
+                isShowing = !isShowing; //change boolean to reflect state change
+                $('.overlay').toggle(isShowing); //show or hide element
+            }
+
+            $(document).on('click', function (e) {
+                if($(e.target).is('.clicker_class') || $(".clicker_class").has(e.target).length !== 0) {
+                    toggleMenu();
+                } else {
+                    isShowing = false;
+                    $('.overlay').hide();
+                }
+            });
+        });
+    })(jQuery);
+
+    var session;
+    $.ajaxSetup({cache: false})
+    $.get('SendEmail.php', function (data) {
+        session = message;
+        if(message=="true"){
+            $('#script').show();
+        }else{
+            $('#script').show();
+        }
+    });
+
+</script>
+</body>
+</html>
