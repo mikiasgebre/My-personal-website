@@ -8,10 +8,10 @@ require 'PHPMailer/PHPMailerAutoload.php';
 
     $mail = new PHPMailer;
     $mail->isMail();                            // Set mailer to use SMTP
-    $mail->Host = 'ns11.xetnet.com';             // Specify main and backup SMTP servers
+    $mail->Host = '***********';             // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                     // Enable SMTP authentication
-    $mail->Username = 'admin@mikiasgebre.com';          // SMTP username
-    $mail->Password = 'ADDISbibi1'; // SMTP password
+    $mail->Username = '*************';          // SMTP username
+    $mail->Password = '*********'; // SMTP password
     $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
     $mail->SingleTo = true;
