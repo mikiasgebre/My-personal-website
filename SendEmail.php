@@ -21,13 +21,7 @@ require 'PHPMailer/PHPMailerAutoload.php';
     $message = $_GET['message'];
      $var = $_GET['var'];
 
-    $mail->setFrom('info@gmail.com', 'CodexWorld');
-    $mail->addReplyTo('info@gmail.com', 'CodexWorld');
-    $mail->From = "mymail@gmail.com";
-    $mail->FromName = "mikiasgebre.com";
-    $address = "whoto@otherdomain.com";
-    $mail->addAddress($address,"mikiasgebre.com");
-
+   
 
     $email_from = $email;
     $email_subject = "New Form submission";
